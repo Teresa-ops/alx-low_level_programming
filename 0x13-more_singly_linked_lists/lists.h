@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include < betty>
+
 /**
  * struct listint_s - singly linked list
  * @n: integer
