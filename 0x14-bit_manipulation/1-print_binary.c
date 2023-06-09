@@ -3,8 +3,7 @@
  * print_binary - prints decimal as binary
  * @n: long integer
  */
-
-void print_binary(unsigned long int n)
+int get_bit(unsigned long int n, unsigned int index)
 {
 	signed long int size;
 	char c;
