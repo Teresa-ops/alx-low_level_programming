@@ -5,21 +5,16 @@
  *
  * Return: decimal (unsigned int)
  */
-
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal = 0;
-	unsigned int i;
-
-	for (decimal = 0, i = 0; b[i]; i++)
-	{
-		if (b[i] == '1')
-			decimal = (decimal << 1) | 1;
-		else if (b[i] == '0')
-			decimal <<= 1;
-		else if (b[i] != '0' && b[i] != '1')
-			return (0);
-	}
-
-	return (decimal);
+if (!b)
+return (0);
+unsigned int dec_val = 0;
+size_t i = 0;
+while (b[i] == '0' || b[i] == '1')
+{
+dec_val = (dec_val << 1) + (b[i] - '0');
+i++;
+}
+return (dec_val);
 }
